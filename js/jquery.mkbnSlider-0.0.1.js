@@ -1,5 +1,29 @@
-$(function () {
 
+// クラスと言う概念がないので、prototypeを使う
+
+
+
+// $.fn - $.prototype (aliasとかショートカットみたいなもの)
+// $ コンストラクタ関数
+// $.prototype という特殊なプロパティ
+$.fn.mkbnSlider = function() {
+	// ホントに使えたかどうかDebugチェック
+	alert('つかえるぞおおおおおおおおおおおおおお');
+};
+
+// 文字列に対して新しいインスタンスメソッドができる
+// prototype汚染があるので、jqueryがデファクトになっている　詳しくは「prototype汚染」で検索	
+// String.prototype.a = function() {
+// 
+// }
+
+// クラスみたいになものに
+// 'あいうえお'.a();
+
+
+
+
+$(function () {
 	// ラッパーのdiv（ステージということにします）
 	var $stage = $('#mkbn');
 
