@@ -45,6 +45,8 @@ https://docs.google.com/document/d/1hbhItV3n_EQZQ-UslDCdDswRcCaVHANAJUANS7-PYP4/
 						// animate実行した後にそのアニメーションが実行してるか監視
 						.promise()
 						// animateがちゃんと実行された後に実行したい処理を入れる。
+						// done(slide())だと、アニメーションが実行する前にslideが実行されてしまうため、
+						// 実行したい関数を変数として明示的に指定しておく
 						.done(slide);
 					}, 600);
 				}
@@ -56,8 +58,8 @@ https://docs.google.com/document/d/1hbhItV3n_EQZQ-UslDCdDswRcCaVHANAJUANS7-PYP4/
 	</script>
 	</head>
 	<body>
-		<div id="mkbn_wrap">
-			<ul id="mkbn">
+		<div id="mkbn">
+			<ul>
 				<li style="background-color:red">1</li>
 				<li style="background-color:blue">2</li>
 				<li style="background-color:green">3</li>

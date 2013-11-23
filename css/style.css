@@ -1,8 +1,11 @@
-#mkbn_wrap{
+#mkbn{
+	overflow: hidden;
 	position: relative;
+	width: 300px;
+	height: 200px;
 }
 
-#mkbn {
+#mkbn ul {
 	position: absolute;
 	top: 0;
 	left: 0;
