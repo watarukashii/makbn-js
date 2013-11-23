@@ -16,9 +16,13 @@ and open the template in the editor.
 				var $ul = $('#mkbn');
 				//＃mkbn内の<li>をすべて取得する
 				var $li = $ul.find('li');
+				// <li> の幅を取得 (数値) 
 				var liWidth = $li.width();
+				// プロパティなので括弧はいらない
 				var liLength = $li.length;
+				// 外側の幅が決まります
 				var ulWidth = liWidth * liLength;
+				// 
 				$ul.width(ulWidth);
 			});
 	</script>
