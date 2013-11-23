@@ -26,9 +26,15 @@ https://docs.google.com/document/d/1hbhItV3n_EQZQ-UslDCdDswRcCaVHANAJUANS7-PYP4/
 				// 
 				$ul.width(ulWidth);
 
-				//
-				$ul.animate({ left: -300 });
-
+				// 再帰
+				function slide () {
+					setTimeout(function(){
+						$ul.animate({ left:liWidth * -1});
+					}, 600);
+				}
+				
+				// 再帰関数を実行
+				slide();
 
 			});
 	</script>
