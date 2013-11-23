@@ -18,14 +18,14 @@ https://docs.google.com/document/d/1hbhItV3n_EQZQ-UslDCdDswRcCaVHANAJUANS7-PYP4/
 						duration: 800,
 						wait: 2000,
 						isDurationRandom: true,
-						isRepeat: false
-
+						isRepeat: false,
 				});
 				$('.slider').mkbnSlider({
 						duration: 500,
 						wait:800,
 						isDurationRandom: false,
-						isRepeat: true
+						isRepeat: true,
+						autoPlay: false
 				});
 			});
 		</script>
@@ -44,6 +44,16 @@ https://docs.google.com/document/d/1hbhItV3n_EQZQ-UslDCdDswRcCaVHANAJUANS7-PYP4/
 			</ul>
 		</div>
 		<div style="padding: 10px;"></div>
+		<div class='ctrl'>
+			<a href="#prev" class="prev"><</a>
+			<a href="#next" class="next">></a>
+			<ol class="pager">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ol>
+		</div>
 		<div class="slider">
 			<ul>
 				<li style="background-color:red">1</li>

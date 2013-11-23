@@ -13,7 +13,8 @@ $.fn.mkbnSlider = function(options) {
 		duration: 800,
 		wait: 2000,
 		isDurationRandom: true,
-		isRepeat: false
+		isRepeat: false,
+		autoPlay: true
 	}, options);
 
 	// optionに仮引数に渡させたものがはいっているかチェック
@@ -85,8 +86,11 @@ $.fn.mkbnSlider = function(options) {
 		}, options.wait);
 	}
 	
-	// 再帰関数を実行
-	slide();
+	// 自動再生する場合
+	if (options.autoPlay) {
+		// 再帰関数を実行
+		slide();		
+	}
 };
 
 // 文字列に対して新しいインスタンスメソッドができる
