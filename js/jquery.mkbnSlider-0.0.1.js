@@ -8,11 +8,12 @@
 // $.prototype という特殊なプロパティ
 $.fn.mkbnSlider = function() {
 	// ホントに使えたかどうかDebugチェック
-	alert('つかえるぞおおおおおおおおおおおおおお');
+	// alert('つかえるぞおおおおおおおおおおおおおお');
+	
 	// ラッパーのdiv（ステージということにします）
 	var $stage = this;
 	// 本当にDebugのときにしか気をつけること(Debugツールをつかうときだけ)
-	console.log(this);
+	// console.log(this);
 
 	//#mkbnの取得 ステージの中の<ul>を取得
 	//セレクタ「#mkbn ul」とほぼ同じ
