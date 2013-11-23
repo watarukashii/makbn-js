@@ -10,7 +10,9 @@ $.fn.mkbnSlider = function() {
 	// ホントに使えたかどうかDebugチェック
 	alert('つかえるぞおおおおおおおおおおおおおお');
 	// ラッパーのdiv（ステージということにします）
-	var $stage = $('#mkbn');
+	var $stage = this;
+	// 本当にDebugのときにしか気をつけること(Debugツールをつかうときだけ)
+	console.log(this);
 
 	//#mkbnの取得 ステージの中の<ul>を取得
 	//セレクタ「#mkbn ul」とほぼ同じ
