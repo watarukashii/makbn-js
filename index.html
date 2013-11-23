@@ -26,10 +26,26 @@ https://docs.google.com/document/d/1hbhItV3n_EQZQ-UslDCdDswRcCaVHANAJUANS7-PYP4/
 				// 
 				$ul.width(ulWidth);
 
+				// 現在中央に着ているliの番号
+				var currentIndex = 0;
+
 				// 再帰
 				function slide () {
+					// currentIndexに1を加算する
+					// currentIndex = currentIndex +1;　と同じ意味
+					currentIndex += 1;
+					// 現在のliの番号がいliの数を超えた時一番最後の画像にきたら、幅と番号を初期化
+					if (currentIndex > liLength - 1) {
+						currentIndex = 0;
+					}
+					// setTimeout(処理、何ミリ秒後)
 					setTimeout(function(){
-						$ul.animate({ left:liWidth * -1});
+						$ul
+						.animate({ left: liWidth * -1 * currentIndex })
+						// animate実行した後にそのアニメーションが実行してるか監視
+						.promise()
+						// animateがちゃんと実行された後に実行したい処理を入れる。
+						.done(slide);
 					}, 600);
 				}
 				
