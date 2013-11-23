@@ -10,6 +10,18 @@ and open the template in the editor.
 		<title>TODO supply a title</title>
 		<link rel="stylesheet" href="css/style.css">
 		<script src="js/jquery-1.10.2.js"></script>
+		<script>
+			$(function () {
+				//#mkbnの取得
+				var $ul = $('#mkbn');
+				//＃mkbn内の<li>をすべて取得する
+				var $li = $ul.find('li');
+				var liWidth = $li.width();
+				var liLength = $li.length;
+				var ulWidth = liWidth * liLength;
+				$ul.width(ulWidth);
+			});
+	</script>
 	</head>
 	<body>
 		<div>画像のスライドショーを作る</div>
