@@ -9,21 +9,6 @@
 $.fn.mkbnSlider = function() {
 	// ホントに使えたかどうかDebugチェック
 	alert('つかえるぞおおおおおおおおおおおおおお');
-};
-
-// 文字列に対して新しいインスタンスメソッドができる
-// prototype汚染があるので、jqueryがデファクトになっている　詳しくは「prototype汚染」で検索	
-// String.prototype.a = function() {
-// 
-// }
-
-// クラスみたいになものに
-// 'あいうえお'.a();
-
-
-
-
-$(function () {
 	// ラッパーのdiv（ステージということにします）
 	var $stage = $('#mkbn');
 
@@ -68,5 +53,17 @@ $(function () {
 	
 	// 再帰関数を実行
 	slide();
+};
 
-});
+// 文字列に対して新しいインスタンスメソッドができる
+// prototype汚染があるので、jqueryがデファクトになっている　詳しくは「prototype汚染」で検索	
+// String.prototype.a = function() {
+// 
+// }
+
+// クラスみたいになものに
+// 'あいうえお'.a();
+
+
+
+
