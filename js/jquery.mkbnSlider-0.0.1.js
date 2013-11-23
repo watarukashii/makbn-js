@@ -8,6 +8,14 @@
 // $.prototype という特殊なプロパティ
 $.fn.mkbnSlider = function(options) {
 
+	// 必要な引数が入っていなかったら初期化 ハッシュのMergeを行う
+	options = $.extend({
+		duration: 800,
+		wait: 2000,
+		isDurationRandom: true,
+		isRepeat: false
+	}, options);
+
 	// optionに仮引数に渡させたものがはいっているかチェック
 	console.log(options);
 
@@ -30,8 +38,10 @@ $.fn.mkbnSlider = function(options) {
 	var liLength = $li.length;
 	// 外側の幅が決まります
 	var ulWidth = liWidth * liLength;
-	// 
-	$ul.width(ulWidth);
+	// 幅×数でマックス横幅を取得する
+	var alwidth = liWidth * liLength;
+	//ulにwidthをしていする 
+	$ul.width(alwidth);
 
 	// 現在中央に着ているliの番号
 	var currentIndex = 0;
@@ -54,7 +64,7 @@ $.fn.mkbnSlider = function(options) {
 			//durationを決定する
 			var duration = options.duration;
 			var durationRandomRangeMin = 500;
-			var durationRandomRangeMax = 10000;
+			var durationRandomRangeMax = 5000;
 
 			// duration の定義 ランダム表示
 			if (options.isDurationRandom) {
