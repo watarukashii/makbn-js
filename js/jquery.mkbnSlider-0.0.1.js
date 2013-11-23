@@ -6,10 +6,14 @@
 // $.fn - $.prototype (aliasとかショートカットみたいなもの)
 // $ コンストラクタ関数
 // $.prototype という特殊なプロパティ
-$.fn.mkbnSlider = function() {
+$.fn.mkbnSlider = function(options) {
+
+	// optionに仮引数に渡させたものがはいっているかチェック
+	console.log(options);
+
 	// ホントに使えたかどうかDebugチェック
 	// alert('つかえるぞおおおおおおおおおおおおおお');
-	
+
 	// ラッパーのdiv（ステージということにします）
 	var $stage = this;
 	// 本当にDebugのときにしか気をつけること(Debugツールをつかうときだけ)
